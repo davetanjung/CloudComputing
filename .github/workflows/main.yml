@@ -55,10 +55,5 @@ jobs:
             cd /home/${{ secrets.SERVER_USERNAME }}/web/dave.pakevan.web.id/public_html &&
             unzip -o /home/${{ secrets.SERVER_USERNAME }}/deploy.zip &&
             rm /home/${{ secrets.SERVER_USERNAME }}/deploy.zip &&
-            php artisan config:clear &&
-            php artisan route:clear &&
-            php artisan view:clear &&
-            php artisan config:cache &&
-            php artisan route:cache &&
-            php artisan view:cache
+            php artisan optimize
           "
