@@ -55,7 +55,5 @@ jobs:
             cd /home/${{ secrets.SERVER_USERNAME }}/web/dave.pakevan.web.id/public_html &&
             unzip -o /home/${{ secrets.SERVER_USERNAME }}/deploy.zip &&
             rm /home/${{ secrets.SERVER_USERNAME }}/deploy.zip &&
-            composer install --no-dev --optimize-autoloader &&
-            php artisan migrate --force &&
             php artisan optimize
           "
