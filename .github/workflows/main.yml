@@ -39,7 +39,7 @@ jobs:
 
       # 6️⃣ Zip the project (exclude unnecessary files)
       - name: Package for deployment
-        run: zip -r deploy.zip . -x "*.git*" "vendor/*" "node_modules/*" ".env" "storage/*"
+        run: zip -r deploy.zip . -x "*.git*" "node_modules/*" ".env" "storage/*"
 
       # 7️⃣ Setup SSH to server
       - name: Setup SSH
